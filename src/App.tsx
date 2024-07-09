@@ -1,14 +1,23 @@
 import { useRoutes } from "react-router-dom";
 import "./app.css";
 
-// Import Pages
+// Layouts
+import AdminLayout from "./pages/AdminLayout";
+
+// Import
 import Dashboard from "./pages/Dashboard";
 
 function App() {
   const routes = [
     {
       path: "/",
-      element: <Dashboard />,
+      element: <AdminLayout />,
+      children: [
+        {
+          path: "",
+          element: <Dashboard />,
+        },
+      ],
     },
   ];
 
