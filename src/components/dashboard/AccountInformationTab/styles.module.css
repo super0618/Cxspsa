@@ -5,10 +5,12 @@
 .heading {
   margin: 0;
   font-weight: 600;
+  text-wrap: nowrap;
 }
 
 .leading {
   margin: 0;
+  text-wrap: nowrap;
 }
 
 .card-title {
@@ -28,4 +30,8 @@
 
 .row-gap {
   padding: 8px 0;
+}
+
+.company-logo {
+  padding: 24px 24px 24px 0;
 }
