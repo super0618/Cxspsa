@@ -1,0 +1,32 @@
+.main {
+  width: 100%;
+}
+
+.heading {
+  margin: 0;
+  font-weight: 600;
+}
+
+.leading {
+  margin: 0;
+}
+
+.row-gap {
+  padding: 8px 0;
+}
+
+.card-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.main-content {
+  flex: 1 1 auto;
+}
+
+.side-content {
+  flex: 0 0 360px;
+}

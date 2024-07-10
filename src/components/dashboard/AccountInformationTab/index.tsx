@@ -159,4 +159,4 @@ const AccountInformationTab = () => {
   );
 };
 
-export default AccountInformationTab;
+export { AccountInformationTab };

@@ -158,4 +158,4 @@ const DashboardTab = () => {
   );
 };
 
-export default DashboardTab;
+export { DashboardTab };

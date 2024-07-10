@@ -107,4 +107,4 @@ const PaymentHistoryTab = () => {
   );
 };
 
-export default PaymentHistoryTab;
+export { PaymentHistoryTab };

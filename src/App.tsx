@@ -3,9 +3,14 @@ import "./app.css";
 
 // Layouts
 import AdminLayout from "./pages/AdminLayout";
+import AuthLayout from "./pages/AuthLayout";
 
 // Import
+import SignIn from "./pages/auth/SignIn";
+import SignUp from "./pages/auth/SignUp";
+import OTP from "./pages/auth/OTP";
 import Dashboard from "./pages/Dashboard";
+import Landing from "./pages/Landing";
 
 function App() {
   const routes = [
@@ -15,7 +20,29 @@ function App() {
       children: [
         {
           path: "",
+          element: <Landing />,
+        },
+        {
+          path: "dashboard",
           element: <Dashboard />,
+        },
+      ],
+    },
+    {
+      path: "/auth",
+      element: <AuthLayout />,
+      children: [
+        {
+          path: "signin",
+          element: <SignIn />,
+        },
+        {
+          path: "signup",
+          element: <SignUp />,
+        },
+        {
+          path: "otp",
+          element: <OTP />,
         },
       ],
     },

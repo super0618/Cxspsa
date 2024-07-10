@@ -134,4 +134,4 @@ const ManageSubscriptionsTab = () => {
   );
 };
 
-export default ManageSubscriptionsTab;
+export { ManageSubscriptionsTab };

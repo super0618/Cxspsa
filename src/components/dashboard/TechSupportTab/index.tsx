@@ -121,4 +121,4 @@ const TechSupportTab = () => {
   );
 };
 
-export default TechSupportTab;
+export { TechSupportTab };

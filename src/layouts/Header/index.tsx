@@ -15,15 +15,19 @@ const Header = () => {
   const items: MenuProps["items"] = [
     {
       key: "1",
-      label: <a href="#">1st menu item</a>,
+      label: <a href="#">Knowledgebase</a>,
     },
     {
       key: "2",
-      label: <a href="#">2nd menu item</a>,
+      label: <a href="#">Subscription Info</a>,
     },
     {
       key: "3",
-      label: <a href="#">3rd menu item</a>,
+      label: <a href="#">Logout</a>,
+    },
+    {
+      key: "4",
+      label: <a href="#">My Login History</a>,
     },
   ];
 

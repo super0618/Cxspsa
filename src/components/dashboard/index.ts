@@ -1,15 +1,6 @@
-import DashboardTab from "./DashboardTab";
-import ManageSubscriptionsTab from "./ManageSubscriptionsTab";
-import TechSupportTab from "./TechSupportTab";
-import PaymentHistoryTab from "./PaymentHistoryTab";
-import AccountInformationTab from "./AccountInformationTab";
-import HolidayCalendarTab from "./HolidayCalendarTab";
-
-export {
-  DashboardTab,
-  ManageSubscriptionsTab,
-  TechSupportTab,
-  PaymentHistoryTab,
-  AccountInformationTab,
-  HolidayCalendarTab,
-};
+export * from "./DashboardTab";
+export * from "./ManageSubscriptionsTab";
+export * from "./TechSupportTab";
+export * from "./PaymentHistoryTab";
+export * from "./AccountInformationTab";
+export * from "./HolidayCalendarTab";

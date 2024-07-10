@@ -89,4 +89,4 @@ const HolidayCalendarTab = () => {
   );
 };
 
-export default HolidayCalendarTab;
+export { HolidayCalendarTab };
