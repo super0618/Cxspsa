@@ -128,7 +128,7 @@ const ManageSubscriptionsTab = () => {
           <IconFileExcel size={18} />
           <IconExternalLink size={18} />
         </Flex>
-        <Table columns={columns} dataSource={data} />
+        <Table columns={columns} dataSource={data} pagination={false} />
       </Space>
     </Space>
   );

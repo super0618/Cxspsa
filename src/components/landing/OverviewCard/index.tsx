@@ -2,7 +2,7 @@ import { Flex, Card, Space } from "antd";
 import { IconArrowUpRight, IconArrowDownRight } from "@tabler/icons-react";
 import styles from "./styles.module.css";
 
-interface LandingCardProps {
+interface OverviewCardProps {
   title: string;
   n1: number;
   n2: number;
@@ -11,7 +11,14 @@ interface LandingCardProps {
   icon: React.ReactNode;
 }
 
-const LandingCard = ({ title, n1, n2, rate, text, icon }: LandingCardProps) => {
+const OverviewCard = ({
+  title,
+  n1,
+  n2,
+  rate,
+  text,
+  icon,
+}: OverviewCardProps) => {
   const increaseColor = "#57A57B";
   const decreaseColor = "#C25C5B";
 
@@ -45,4 +52,4 @@ const LandingCard = ({ title, n1, n2, rate, text, icon }: LandingCardProps) => {
   );
 };
 
-export default LandingCard;
+export { OverviewCard };

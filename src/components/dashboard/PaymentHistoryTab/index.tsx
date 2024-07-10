@@ -91,7 +91,7 @@ const PaymentHistoryTab = () => {
 
       <Space direction="vertical" size="small" className={styles.main}>
         <p className={styles.heading}>Next payment due:</p>
-        <Table columns={columns} dataSource={data} />
+        <Table columns={columns} dataSource={data} pagination={false} />
       </Space>
 
       <Space direction="vertical" size="small" className={styles.main}>
@@ -101,7 +101,7 @@ const PaymentHistoryTab = () => {
           <IconFileExcel size={18} />
           <IconExternalLink size={18} />
         </Flex>
-        <Table columns={columns} dataSource={data} />
+        <Table columns={columns} dataSource={data} pagination={false} />
       </Space>
     </Space>
   );

@@ -148,7 +148,7 @@ const AccountInformationTab = () => {
             Add an Administrator
           </Button>
         </Flex>
-        <Table columns={columns} dataSource={data} />
+        <Table columns={columns} dataSource={data} pagination={false} />
       </Space>
 
       <Space direction="vertical" size="small" className={styles.main}>

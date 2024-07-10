@@ -141,7 +141,7 @@ const DashboardTab = () => {
           <IconFileExcel size={18} />
           <IconExternalLink size={18} />
         </Flex>
-        <Table columns={columns} dataSource={data} />
+        <Table columns={columns} dataSource={data} pagination={false} />
       </Space>
 
       <Space direction="vertical" size="small" className={styles.main}>
@@ -152,7 +152,7 @@ const DashboardTab = () => {
           <IconExternalLink size={18} />
           <IconHelp size={18} />
         </Flex>
-        <Table columns={columns} dataSource={data} />
+        <Table columns={columns} dataSource={data} pagination={false} />
       </Space>
     </Space>
   );

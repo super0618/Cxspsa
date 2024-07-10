@@ -1,3 +1,2 @@
-import LandingCard from "./Card";
-
-export { LandingCard };
+export * from "./OverviewCard";
+export * from "./LandingCard";

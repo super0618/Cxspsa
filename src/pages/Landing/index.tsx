@@ -1,6 +1,7 @@
 import { Space, Flex, Select, Row, Col, Card, Table, Tag } from "antd";
 import type { TableProps } from "antd";
-import { LandingCard } from "../../components/landing";
+import { CChart } from "@coreui/react-chartjs";
+import { OverviewCard, LandingCard } from "../../components/landing";
 import styles from "./styles.module.css";
 import {
   IconBriefcase,
@@ -158,7 +159,7 @@ const Landing = () => {
 
       <Row gutter={16}>
         <Col xs={24} sm={12} xl={6} className={styles["row-gap"]}>
-          <LandingCard
+          <OverviewCard
             title="Projects"
             n1={850}
             n2={1100}
@@ -172,7 +173,7 @@ const Landing = () => {
           />
         </Col>
         <Col xs={24} sm={12} xl={6} className={styles["row-gap"]}>
-          <LandingCard
+          <OverviewCard
             title="Tasks"
             n1={100}
             n2={110}
@@ -186,7 +187,7 @@ const Landing = () => {
           />
         </Col>
         <Col xs={24} sm={12} xl={6} className={styles["row-gap"]}>
-          <LandingCard
+          <OverviewCard
             title="Resources"
             n1={85}
             n2={90}
@@ -200,7 +201,7 @@ const Landing = () => {
           />
         </Col>
         <Col xs={24} sm={12} xl={6} className={styles["row-gap"]}>
-          <LandingCard
+          <OverviewCard
             title="Time Spent"
             n1={752}
             n2={885}
@@ -217,8 +218,8 @@ const Landing = () => {
 
       <Flex justify="space-between" gap={16}>
         <div className={styles["main-content"]}>
-          <Card
-            title={
+          <LandingCard
+            header={
               <Flex align="center" justify="space-between">
                 <h3 className={styles.heading}>Profile Summary</h3>
                 <Flex align="center" gap={8}>
@@ -235,24 +236,119 @@ const Landing = () => {
               </Flex>
             }
           >
-            <Table columns={columns} dataSource={data} />
-          </Card>
+            <Table columns={columns} dataSource={data} pagination={false} />
+          </LandingCard>
         </div>
+
         <div className={styles["side-content"]}>
-          <Card
-            title={
+          <LandingCard
+            header={
               <Flex align="center" justify="space-between">
                 <h3 className={styles.heading}>Overall Progress</h3>
                 <Flex align="center">
                   <Select defaultValue={["1"]} style={{ width: 120 }}>
-                    <Select.Option value="1">Project</Select.Option>
+                    <Select.Option value="1">See all</Select.Option>
                   </Select>
                 </Flex>
               </Flex>
             }
           >
-            Chart Here
-          </Card>
+            <CChart
+              type="doughnut"
+              data={{
+                labels: ["Label1", "Label2", "Label3", "Label4"],
+                datasets: [
+                  {
+                    backgroundColor: [
+                      "#CDB4DB",
+                      "#A2D2FF",
+                      "#D62828",
+                      "#2A9D8F",
+                    ],
+                    data: [40, 20, 80, 10],
+                  },
+                ],
+              }}
+              options={{
+                plugins: {
+                  legend: {
+                    labels: {
+                      color: "#666",
+                    },
+                    position: "bottom",
+                  },
+                },
+              }}
+            />
+          </LandingCard>
+        </div>
+      </Flex>
+
+      <Flex justify="space-between" gap={16}>
+        <div className={styles["main-content"]}>
+          <LandingCard
+            header={
+              <Flex align="center" justify="space-between">
+                <h3 className={styles.heading}>Milestone Progress</h3>
+                <Flex align="center" gap={8}>
+                  <Select defaultValue={["1"]} style={{ width: 120 }}>
+                    <Select.Option value="1">Project</Select.Option>
+                  </Select>
+                  <Select defaultValue={["1"]} style={{ width: 160 }}>
+                    <Select.Option value="1">Milestones</Select.Option>
+                  </Select>
+                  <Select defaultValue={["1"]} style={{ width: 120 }}>
+                    <Select.Option value="1">Stats</Select.Option>
+                  </Select>
+                </Flex>
+              </Flex>
+            }
+          >
+            <Table columns={columns} dataSource={data} pagination={false} />
+          </LandingCard>
+        </div>
+
+        <div className={styles["side-content"]}>
+          <LandingCard
+            header={
+              <Flex align="center" justify="space-between">
+                <h3 className={styles.heading}>Overall Progress</h3>
+                <Flex align="center">
+                  <Select defaultValue={["1"]} style={{ width: 120 }}>
+                    <Select.Option value="1">See all</Select.Option>
+                  </Select>
+                </Flex>
+              </Flex>
+            }
+          >
+            <CChart
+              type="doughnut"
+              data={{
+                labels: ["Label1", "Label2", "Label3", "Label4"],
+                datasets: [
+                  {
+                    backgroundColor: [
+                      "#CDB4DB",
+                      "#A2D2FF",
+                      "#D62828",
+                      "#2A9D8F",
+                    ],
+                    data: [40, 20, 80, 10],
+                  },
+                ],
+              }}
+              options={{
+                plugins: {
+                  legend: {
+                    labels: {
+                      color: "#666",
+                    },
+                    position: "bottom",
+                  },
+                },
+              }}
+            />
+          </LandingCard>
         </div>
       </Flex>
     </Space>

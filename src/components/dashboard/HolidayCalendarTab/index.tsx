@@ -84,7 +84,7 @@ const HolidayCalendarTab = () => {
         <Select.Option value="2024">2024</Select.Option>
       </Select>
 
-      <Table columns={columns} dataSource={data} />
+      <Table columns={columns} dataSource={data} pagination={false} />
     </Space>
   );
 };
