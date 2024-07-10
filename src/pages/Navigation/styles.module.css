@@ -1,0 +1,29 @@
+.main {
+  width: 100%;
+}
+
+.heading {
+  margin: 0;
+  font-weight: 500;
+}
+
+.leading {
+  margin: 0;
+}
+
+.select {
+  width: 150px;
+}
+
+.icon-button {
+  padding: 8px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  translate: 0.2s;
+}
+
+.icon-button:hover {
+  background-color: #ddd;
+}

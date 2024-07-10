@@ -11,8 +11,13 @@ import SignUp from "./pages/auth/SignUp";
 import OTP from "./pages/auth/OTP";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
+import Navigation from "./pages/Navigation";
+
+import { registerLicense } from "@syncfusion/ej2-base";
 
 function App() {
+  registerLicense(process.env.SYNCFUSION_LICENSE_KEY as string);
+
   const routes = [
     {
       path: "/",
@@ -25,6 +30,10 @@ function App() {
         {
           path: "dashboard",
           element: <Dashboard />,
+        },
+        {
+          path: "navigation",
+          element: <Navigation />,
         },
       ],
     },
