@@ -1,6 +1,6 @@
-import { Space, Flex, Select, Row, Col, Card, Table, Tag } from "antd";
+import { Space, Flex, Select, Row, Col, Table, Tag } from "antd";
 import type { TableProps } from "antd";
-import { CChart } from "@coreui/react-chartjs";
+import { Doughnut } from "react-chartjs-2";
 import { OverviewCard, LandingCard } from "../../components/landing";
 import styles from "./styles.module.css";
 import {
@@ -253,30 +253,25 @@ const Landing = () => {
               </Flex>
             }
           >
-            <CChart
-              type="doughnut"
+            <Doughnut
               data={{
-                labels: ["Label1", "Label2", "Label3", "Label4"],
+                labels: ["Red", "Blue", "Yellow"],
                 datasets: [
                   {
+                    data: [300, 50, 100],
                     backgroundColor: [
-                      "#CDB4DB",
-                      "#A2D2FF",
-                      "#D62828",
-                      "#2A9D8F",
+                      "rgb(54, 162, 235)",
+                      "rgb(255, 205, 86)",
+                      "rgb(255, 99, 132)",
                     ],
-                    data: [40, 20, 80, 10],
+                    hoverOffset: 12,
                   },
                 ],
               }}
               options={{
+                cutout: "60%",
                 plugins: {
-                  legend: {
-                    labels: {
-                      color: "#666",
-                    },
-                    position: "bottom",
-                  },
+                  legend: { labels: { color: "#666" }, position: "bottom" },
                 },
               }}
             />
@@ -321,30 +316,25 @@ const Landing = () => {
               </Flex>
             }
           >
-            <CChart
-              type="doughnut"
+            <Doughnut
               data={{
-                labels: ["Label1", "Label2", "Label3", "Label4"],
+                labels: ["Red", "Blue", "Yellow"],
                 datasets: [
                   {
+                    data: [300, 50, 100],
                     backgroundColor: [
-                      "#CDB4DB",
-                      "#A2D2FF",
-                      "#D62828",
-                      "#2A9D8F",
+                      "rgb(255, 99, 132)",
+                      "rgb(54, 162, 235)",
+                      "rgb(255, 205, 86)",
                     ],
-                    data: [40, 20, 80, 10],
+                    hoverOffset: 12,
                   },
                 ],
               }}
               options={{
+                cutout: "60%",
                 plugins: {
-                  legend: {
-                    labels: {
-                      color: "#666",
-                    },
-                    position: "bottom",
-                  },
+                  legend: { labels: { color: "#666" }, position: "bottom" },
                 },
               }}
             />
