@@ -1,38 +1,56 @@
-import { Space, Popover, Tabs } from "antd";
+import { Space, Popover, Tabs, Flex } from "antd";
 import type { TabsProps } from "antd";
 import { IconButton } from "../../common";
-import { IconBellFilled } from "@tabler/icons-react";
+import { IconBellFilled, IconCheck } from "@tabler/icons-react";
+import moment from "moment";
 import styles from "./styles.module.css";
 
 interface NotifyItemProps {
-  time: string;
-  children: string;
+  time: Date;
+  message: string;
 }
 
-const NotifyItem = ({ time, children }: NotifyItemProps) => {
+const NotifyItem = ({ time, message }: NotifyItemProps) => {
   return (
     <div className={styles.notification}>
-      {children}
-      <p className={styles.timestamp}>{time}</p>
+      <p className={styles.leading}>{message}</p>
+      <p className={styles.timestamp}>{moment(time).fromNow()}</p>
     </div>
   );
 };
 
 const Notification = () => {
+  const notifications: NotifyItemProps[] = [
+    {
+      time: new Date("7/11/2024"),
+      message: "@JohnSmith approved your Timesheet",
+    },
+    {
+      time: new Date("7/12/2024"),
+      message: "@Bob has updated the task you are assigned to",
+    },
+  ];
+
+  const mentions: NotifyItemProps[] = [
+    {
+      time: new Date("7/11/2024"),
+      message: "@John Smith mentioned you",
+    },
+  ];
+
   const notificationContent = (
     <Space direction="vertical" size="small" className={styles.main}>
-      <NotifyItem time="2 mins ago">
-        @JohnSmith Approved your Timesheet
-      </NotifyItem>
-      <NotifyItem time="1 min ago">
-        @Bob has updated the task you are assigned to
-      </NotifyItem>
+      {notifications.map((notification: NotifyItemProps) => (
+        <NotifyItem time={notification.time} message={notification.message} />
+      ))}
     </Space>
   );
 
   const mentionContent = (
     <Space direction="vertical" size="small" className={styles.main}>
-      <NotifyItem time="2 mins ago">@John Smith Mentioned you</NotifyItem>
+      {mentions.map((mention: NotifyItemProps) => (
+        <NotifyItem time={mention.time} message={mention.message} />
+      ))}
     </Space>
   );
 

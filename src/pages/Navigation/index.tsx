@@ -1,4 +1,4 @@
-import { Flex, Select, Space, Tabs } from "antd";
+import { Button, Flex, Select, Space, Tabs } from "antd";
 import type { TabsProps } from "antd";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import type { Position } from "@syncfusion/ej2-react-popups";
@@ -84,7 +84,7 @@ const Navigation = () => {
   ];
 
   return (
-    <Space direction="vertical" size="large" className={styles.main}>
+    <Space direction="vertical" size="small" className={styles.main}>
       <Space direction="vertical" size="small" className={styles.main}>
         <Flex align="center" gap={64}>
           <Flex align="center" gap={14}>
@@ -190,49 +190,53 @@ const Navigation = () => {
           </Select>
         </Flex>
 
-        <Flex align="center" gap={4}>
-          <IconButton tooltip="Project Summary">
-            <img
-              src="/icons/icon-project_summary.svg"
-              alt="Project Summary"
-              width="20"
-            />
-          </IconButton>
-          <IconButton tooltip="Project Details">
-            <img
-              src="/icons/icon-launch_details.svg"
-              alt="Project Details"
-              width="20"
-            />
-          </IconButton>
-          <IconButton tooltip="Project Contacts">
-            <img
-              src="/icons/icon-project_contacts.svg"
-              alt="Project Contacts"
-              width="20"
-            />
-          </IconButton>
-          <IconButton tooltip="Share Project">
-            <img
-              src="/icons/icon-share_project.svg"
-              alt="Share Project"
-              width="20"
-            />
-          </IconButton>
-          <IconButton tooltip="Collaboration">
-            <img
-              src="/icons/icon-team_collaboration.svg"
-              alt="Collaboration"
-              width="20"
-            />
-          </IconButton>
-          <IconButton tooltip="Manage Project Access">
-            <img
-              src="/icons/icon-manage_access.svg"
-              alt="Time Tracking"
-              width="20"
-            />
-          </IconButton>
+        <Flex align="center" justify="space-between">
+          <Flex align="center" gap={4}>
+            <IconButton tooltip="Project Summary">
+              <img
+                src="/icons/icon-project_summary.svg"
+                alt="Project Summary"
+                width="20"
+              />
+            </IconButton>
+            <IconButton tooltip="Project Details">
+              <img
+                src="/icons/icon-launch_details.svg"
+                alt="Project Details"
+                width="20"
+              />
+            </IconButton>
+            <IconButton tooltip="Project Contacts">
+              <img
+                src="/icons/icon-project_contacts.svg"
+                alt="Project Contacts"
+                width="20"
+              />
+            </IconButton>
+            <IconButton tooltip="Share Project">
+              <img
+                src="/icons/icon-share_project.svg"
+                alt="Share Project"
+                width="20"
+              />
+            </IconButton>
+            <IconButton tooltip="Collaboration">
+              <img
+                src="/icons/icon-team_collaboration.svg"
+                alt="Collaboration"
+                width="20"
+              />
+            </IconButton>
+            <IconButton tooltip="Manage Project Access">
+              <img
+                src="/icons/icon-manage_access.svg"
+                alt="Time Tracking"
+                width="20"
+              />
+            </IconButton>
+          </Flex>
+
+          <Button type="primary">Close Project</Button>
         </Flex>
       </Space>
 

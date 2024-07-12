@@ -1,4 +1,4 @@
-import { Header } from "../layouts";
+import { Header, Chat } from "../layouts";
 import { useLocation, Outlet } from "react-router-dom";
 import styles from "./styles.module.css";
 
@@ -17,6 +17,7 @@ const AdminLayout = () => {
       <div className={styles.content} style={{ backgroundColor }}>
         <Outlet />
       </div>
+      <Chat />
     </>
   );
 };

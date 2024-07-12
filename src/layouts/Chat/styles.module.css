@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.body {
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  padding: 8px 12px;
+  flex: 1 1 auto;
+}
+
+.footer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.btn {
+  position: fixed;
+  bottom: 36px;
+  right: 36px;
+}
+
+.main {
+  width: 100%;
+}
+
+.heading {
+  margin: 0;
+  font-weight: 600;
+}
+
+.leading {
+  margin: 0;
+}

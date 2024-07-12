@@ -13,14 +13,3 @@
 .logo:hover {
   color: #646565;
 }
-
-.profile {
-  padding: 8px;
-  cursor: pointer;
-  border-radius: 6px;
-  translate: 0.2s;
-}
-
-.profile:hover {
-  background-color: #ddd;
-}
