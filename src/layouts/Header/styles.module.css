@@ -24,16 +24,3 @@
 .profile:hover {
   background-color: #ddd;
 }
-
-.icon-button {
-  padding: 8px;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  translate: 0.2s;
-}
-
-.icon-button:hover {
-  background-color: #ddd;
-}

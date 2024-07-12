@@ -2,13 +2,13 @@ import { Space, Flex, Select, Row, Col, Table, Tag } from "antd";
 import type { TableProps } from "antd";
 import { Doughnut } from "react-chartjs-2";
 import { OverviewCard, LandingCard } from "../../components/landing";
-import styles from "./styles.module.css";
 import {
   IconBriefcase,
   IconChecklist,
   IconClock,
   IconUser,
 } from "@tabler/icons-react";
+import styles from "./styles.module.css";
 
 interface CardIconProps {
   children: React.ReactNode;
@@ -118,12 +118,7 @@ const Landing = () => {
     colorField: "type",
     paddingRight: 80,
     innerRadius: 0.6,
-    label: {
-      text: "value",
-      style: {
-        fontWeight: "bold",
-      },
-    },
+    label: { text: "value", style: { fontWeight: "bold" } },
     legend: {
       color: {
         title: false,
@@ -150,7 +145,7 @@ const Landing = () => {
     <Space direction="vertical" size="middle" className={styles.main}>
       <Flex align="end" justify="space-between">
         <h2 className={styles.leading}>Dashboard</h2>
-        <Select defaultValue={["1"]}>
+        <Select className={styles.select} defaultValue={["1"]}>
           <Select.Option value="1">Last 30 days</Select.Option>
           <Select.Option value="2">Last 7 days</Select.Option>
           <Select.Option value="3">Last 24 hours</Select.Option>
@@ -167,7 +162,7 @@ const Landing = () => {
             text="Decrease from Last Month"
             icon={
               <CardIcon color="#57a57b" bgColor="#ecfff5">
-                <IconBriefcase size={28} />
+                <IconBriefcase size={32} />
               </CardIcon>
             }
           />
@@ -181,7 +176,7 @@ const Landing = () => {
             text="Decrease from Last Month"
             icon={
               <CardIcon color="#c15958" bgColor="#ffeeeb">
-                <IconChecklist size={28} />
+                <IconChecklist size={32} />
               </CardIcon>
             }
           />
@@ -195,7 +190,7 @@ const Landing = () => {
             text="Increase from Last Month"
             icon={
               <CardIcon color="#46489a" bgColor="#e7ecff">
-                <IconUser size={28} />
+                <IconUser size={32} />
               </CardIcon>
             }
           />
@@ -209,7 +204,7 @@ const Landing = () => {
             text="Decrease from Last Month"
             icon={
               <CardIcon color="#e59c39" bgColor="#fef4df">
-                <IconClock size={28} />
+                <IconClock size={32} />
               </CardIcon>
             }
           />

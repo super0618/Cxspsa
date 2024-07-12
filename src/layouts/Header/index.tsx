@@ -1,15 +1,9 @@
 import { Flex, Button, Avatar, Space, Dropdown } from "antd";
-import { IconBellFilled, IconHelp, IconUserFilled } from "@tabler/icons-react";
-import styles from "./styles.module.css";
 import type { MenuProps } from "antd";
-
-interface IconButtonProps {
-  children: React.ReactNode;
-}
-
-const IconButton = ({ children }: IconButtonProps) => {
-  return <div className={styles["icon-button"]}>{children}</div>;
-};
+import { IconHelp, IconUserFilled } from "@tabler/icons-react";
+import { Notification } from "../../components/header";
+import { IconButton } from "../../components/common/index";
+import styles from "./styles.module.css";
 
 const Header = () => {
   const items: MenuProps["items"] = [
@@ -45,9 +39,7 @@ const Header = () => {
         <Flex align="center" gap={4}>
           <Button type="link">Admin Workbench</Button>
 
-          <IconButton>
-            <IconBellFilled color="#666" size={18} />
-          </IconButton>
+          <Notification />
 
           <IconButton>
             <IconHelp color="#666" size={18} />

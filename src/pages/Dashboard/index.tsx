@@ -44,11 +44,7 @@ const Dashboard = () => {
     },
   ];
 
-  return (
-    <>
-      <Tabs defaultActiveKey="1" items={items} tabPosition="top" />
-    </>
-  );
+  return <Tabs defaultActiveKey="1" items={items} tabPosition="top" />;
 };
 
 export default Dashboard;

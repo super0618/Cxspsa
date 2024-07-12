@@ -9,4 +9,36 @@ body {
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+/* Global Styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Global AntD Styles */
+.e-gantt .e-gantt-tree-grid-pane .e-timeline-single-header-outer-div {
+  height: 70px !important;
+}
+
+.e-gantt .e-gantt-chart .e-timeline-single-header-outer-div {
+  height: 70px !important;
+}
+
+.e-gantt .e-gantt-chart .e-timeline-single-header-cell {
+  height: 70px !important;
 }

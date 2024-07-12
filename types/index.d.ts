@@ -9,3 +9,6 @@ declare module "*.jpeg";
 declare module "*.gif";
 declare module "*.webp";
 declare module "*.bmp";
+
+declare module "*.js";
+declare module "*.json";

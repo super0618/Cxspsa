@@ -30,3 +30,7 @@
 .side-content {
   flex: 0 0 300px;
 }
+
+.select {
+  width: 150px;
+}

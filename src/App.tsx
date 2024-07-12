@@ -12,6 +12,7 @@ import OTP from "./pages/auth/OTP";
 import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import Navigation from "./pages/Navigation";
+import Activity from "./pages/Activity";
 
 import { registerLicense } from "@syncfusion/ej2-base";
 
@@ -34,6 +35,10 @@ function App() {
         {
           path: "navigation",
           element: <Navigation />,
+        },
+        {
+          path: "activity",
+          element: <Activity />,
         },
       ],
     },

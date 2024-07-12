@@ -2,26 +2,41 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { ConfigProvider } from "antd";
-import { registerLicense } from "@syncfusion/ej2-base";
-import { Chart, ArcElement, Legend, Tooltip } from "chart.js";
+import {
+  Chart,
+  LineElement,
+  ArcElement,
+  Legend,
+  Tooltip,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+} from "chart.js";
 import App from "./App";
+import { registerLicense } from "@syncfusion/ej2-base";
 
 // Register Syncfusion License Key
 registerLicense(
-  "MzM3NjA1N0AzMjM2MmUzMDJlMzBwQkdWbW1LQXJWU1N4dy9IMHprSk9RWXdOZ0tYVzlkbklveVBuOSthb3pvPQ==;ORg4AjUWIQA/Gnt2U1hhQlJBfV5AQmBIYVp/TGpJfl96cVxMZVVBJAtUQF1hTX5Ud0ViUXpacHxRQ2Nd"
+  "Ngo9BigBOggjHTQxAR8/V1NCaF5cXmZCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdnWXlcd3RUR2lZUE1zV0E="
 );
 
 // Register Element for Chart.js
-Chart.register(ArcElement, Legend, Tooltip);
+Chart.register(
+  LineElement,
+  ArcElement,
+  Legend,
+  Tooltip,
+  CategoryScale,
+  LinearScale,
+  PointElement
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ConfigProvider
       theme={{
-        token: {
-          colorPrimary: "#8a8e8e",
-        },
+        token: { colorPrimary: "#8a8e8e" },
       }}
     >
       <BrowserRouter>
