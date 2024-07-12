@@ -1,7 +1,7 @@
-import { Space, Popover, Tabs, Flex } from "antd";
+import { Space, Popover, Tabs } from "antd";
 import type { TabsProps } from "antd";
 import { IconButton } from "../../common";
-import { IconBellFilled, IconCheck } from "@tabler/icons-react";
+import { IconBellFilled } from "@tabler/icons-react";
 import moment from "moment";
 import styles from "./styles.module.css";
 

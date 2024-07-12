@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Drawer, Button, Input } from "antd";
+import { IconButton } from "../../components/common";
 import { IconMessage2 } from "@tabler/icons-react";
 import styles from "./styles.module.css";
 
@@ -16,14 +17,9 @@ const Chat = () => {
 
   return (
     <>
-      <Button
-        type="primary"
-        size="large"
-        icon={<IconMessage2 />}
-        shape="circle"
-        onClick={showSidebar}
-        className={styles.btn}
-      />
+      <IconButton type="primary" onClick={showSidebar} className={styles.btn}>
+        <IconMessage2 />
+      </IconButton>
       <Drawer
         title="Collaborate with your Team"
         onClose={hideSidebar}

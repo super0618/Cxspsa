@@ -1,7 +1,7 @@
 import { Button, Flex, Select, Space, Tabs } from "antd";
 import type { TabsProps } from "antd";
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import type { Position } from "@syncfusion/ej2-react-popups";
+import { IconButton } from "../../components/common";
+
 import {
   MainTab,
   ResourceAllocationTab,
@@ -13,31 +13,6 @@ import {
   PerformanceTab,
 } from "../../components/navigation";
 import styles from "./styles.module.css";
-
-interface IconButtonProps {
-  tooltip?: string;
-  position?: Position;
-  children: React.ReactNode;
-}
-
-const IconButton = ({
-  tooltip = "",
-  position = "TopCenter",
-  children,
-}: IconButtonProps) => {
-  const tooltipMessage = tooltip.trim();
-  const content = <div className={styles["icon-button"]}>{children}</div>;
-
-  if (!tooltipMessage) {
-    return content;
-  } else {
-    return (
-      <TooltipComponent content={tooltipMessage} position={position}>
-        {content}
-      </TooltipComponent>
-    );
-  }
-};
 
 const Navigation = () => {
   const items: TabsProps["items"] = [
@@ -94,7 +69,7 @@ const Navigation = () => {
               <Select.Option value="2">Project2</Select.Option>
               <Select.Option value="3">Project3</Select.Option>
             </Select>
-            <IconButton tooltip="Create New Project">
+            <IconButton href="/new_project" tooltip="Create New Project">
               <img
                 src="/icons/icon-new_project.svg"
                 alt="Stakeholders"
@@ -104,55 +79,55 @@ const Navigation = () => {
           </Flex>
 
           <Flex align="center">
-            <IconButton tooltip="Stakeholders">
+            <IconButton href="/stakeholders" tooltip="Stakeholders">
               <img
                 src="/icons/icon-stakeholders.svg"
                 alt="Stakeholders"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Scope/Requirements">
+            <IconButton href="/requirements" tooltip="Scope/Requirements">
               <img src="/icons/icon-scope.svg" alt="Requirements" width="20" />
             </IconButton>
-            <IconButton tooltip="Assumptions">
+            <IconButton href="/assumptions" tooltip="Assumptions">
               <img
                 src="/icons/icon-assumptions.svg"
                 alt="Assumptions"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Risks Management">
+            <IconButton href="/risks_management" tooltip="Risks Management">
               <img
                 src="/icons/icon-risks.svg"
                 alt="Risks Management"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Project Documents">
+            <IconButton href="/project_documents" tooltip="Project Documents">
               <img
                 src="/icons/icon-documents.svg"
                 alt="Project Documents"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Time Tracking">
+            <IconButton href="/time_tracking" tooltip="Time Tracking">
               <img
                 src="/icons/icon-time_tracking.svg"
                 alt="Time Tracking"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Change Management">
+            <IconButton href="/change_management" tooltip="Change Management">
               <img
                 src="/icons/icon-change.svg"
                 alt="Change Management"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Issues">
+            <IconButton href="/issues" tooltip="Issues">
               <img src="/icons/icon-issue.svg" alt="Issues" width="20" />
             </IconButton>
-            <IconButton tooltip="Change Control Board">
+            <IconButton href="/ccb" tooltip="Change Control Board">
               <img
                 src="/icons/icon-ccb.svg"
                 alt="Change Control Board"
@@ -192,42 +167,45 @@ const Navigation = () => {
 
         <Flex align="center" justify="space-between">
           <Flex align="center" gap={4}>
-            <IconButton tooltip="Project Summary">
+            <IconButton href="/project_summary" tooltip="Project Summary">
               <img
                 src="/icons/icon-project_summary.svg"
                 alt="Project Summary"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Project Details">
+            <IconButton href="/project_details" tooltip="Project Details">
               <img
                 src="/icons/icon-launch_details.svg"
                 alt="Project Details"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Project Contacts">
+            <IconButton href="/project_contacts" tooltip="Project Contacts">
               <img
                 src="/icons/icon-project_contacts.svg"
                 alt="Project Contacts"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Share Project">
+            <IconButton href="/share_project" tooltip="Share Project">
               <img
                 src="/icons/icon-share_project.svg"
                 alt="Share Project"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Collaboration">
+            <IconButton href="/collaboration" tooltip="Collaboration">
               <img
                 src="/icons/icon-team_collaboration.svg"
                 alt="Collaboration"
                 width="20"
               />
             </IconButton>
-            <IconButton tooltip="Manage Project Access">
+            <IconButton
+              href="/manage_project_access"
+              tooltip="Manage Project Access"
+            >
               <img
                 src="/icons/icon-manage_access.svg"
                 alt="Time Tracking"
