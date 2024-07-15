@@ -11,6 +11,10 @@
   margin: 0;
 }
 
+.input {
+  width: 250px;
+}
+
 .select {
-  width: 150px;
+  width: 200px;
 }

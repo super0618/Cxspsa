@@ -69,10 +69,10 @@ const Navigation = () => {
               <Select.Option value="2">Project2</Select.Option>
               <Select.Option value="3">Project3</Select.Option>
             </Select>
-            <IconButton href="/new_project" tooltip="Create New Project">
+            <IconButton href="/new_project" tooltip="New Project">
               <img
                 src="/icons/icon-new_project.svg"
-                alt="Stakeholders"
+                alt="New Project"
                 width="20"
               />
             </IconButton>

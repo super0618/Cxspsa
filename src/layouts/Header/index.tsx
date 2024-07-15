@@ -12,8 +12,8 @@ const Header = () => {
           COEXSYS
         </a>
 
-        <Button type="primary" size="small">
-          Create a New Project
+        <Button type="primary" size="small" href="/new_project">
+          New Project
         </Button>
 
         <Flex align="center" gap={4}>

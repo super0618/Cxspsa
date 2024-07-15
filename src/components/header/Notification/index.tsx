@@ -40,16 +40,20 @@ const Notification = () => {
 
   const notificationContent = (
     <Space direction="vertical" size="small" className={styles.main}>
-      {notifications.map((notification: NotifyItemProps) => (
-        <NotifyItem time={notification.time} message={notification.message} />
+      {notifications.map((notification: NotifyItemProps, index: number) => (
+        <NotifyItem
+          key={index}
+          time={notification.time}
+          message={notification.message}
+        />
       ))}
     </Space>
   );
 
   const mentionContent = (
     <Space direction="vertical" size="small" className={styles.main}>
-      {mentions.map((mention: NotifyItemProps) => (
-        <NotifyItem time={mention.time} message={mention.message} />
+      {mentions.map((mention: NotifyItemProps, index: number) => (
+        <NotifyItem key={index} time={mention.time} message={mention.message} />
       ))}
     </Space>
   );

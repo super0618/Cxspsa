@@ -13,51 +13,58 @@ import Dashboard from "./pages/Dashboard";
 import Landing from "./pages/Landing";
 import Navigation from "./pages/Navigation";
 import Activity from "./pages/Activity";
-
-import { registerLicense } from "@syncfusion/ej2-base";
+import NewProject from "./pages/NewProject";
+import Stakeholders from "./pages/Stakeholders";
+import Requirements from "./pages/Requirements";
+import Assumptions from "./pages/Assumptions";
+import RiskManagement from "./pages/RiskManagement";
+import ProjectDocuments from "./pages/ProjectDocuments";
+import TimeTracking from "./pages/TimeTracking";
+import ChangeManagement from "./pages/ChangeManagement";
+import Issues from "./pages/Issues";
+import ChangeControlBoard from "./pages/ChangeControlBoard";
+import ProjectSummary from "./pages/ProjectSummary";
+import ProjectDetails from "./pages/ProjectDetails";
+import ProjectContacts from "./pages/ProjectContacts";
+import ShareProject from "./pages/ShareProject";
+import Collaboration from "./pages/Collaboration";
+import ManageProjectAccess from "./pages/ManageProjectAccess";
 
 function App() {
-  registerLicense(process.env.SYNCFUSION_LICENSE_KEY as string);
-
   const routes = [
     {
       path: "/",
       element: <AdminLayout />,
       children: [
-        {
-          path: "",
-          element: <Landing />,
-        },
-        {
-          path: "dashboard",
-          element: <Dashboard />,
-        },
-        {
-          path: "navigation",
-          element: <Navigation />,
-        },
-        {
-          path: "activity",
-          element: <Activity />,
-        },
+        { path: "", element: <Landing /> },
+        { path: "dashboard", element: <Dashboard /> },
+        { path: "navigation", element: <Navigation /> },
+        { path: "activity", element: <Activity /> },
+        { path: "new_project", element: <NewProject /> },
+        { path: "stakeholders", element: <Stakeholders /> },
+        { path: "requirements", element: <Requirements /> },
+        { path: "assumptions", element: <Assumptions /> },
+        { path: "risks_management", element: <RiskManagement /> },
+        { path: "project_documents", element: <ProjectDocuments /> },
+        { path: "time_tracking", element: <TimeTracking /> },
+        { path: "change_management", element: <ChangeManagement /> },
+        { path: "issues", element: <Issues /> },
+        { path: "ccb", element: <ChangeControlBoard /> },
+        { path: "project_summary", element: <ProjectSummary /> },
+        { path: "project_details", element: <ProjectDetails /> },
+        { path: "project_contacts", element: <ProjectContacts /> },
+        { path: "share_project", element: <ShareProject /> },
+        { path: "collaboration", element: <Collaboration /> },
+        { path: "manage_project_access", element: <ManageProjectAccess /> },
       ],
     },
     {
       path: "/auth",
       element: <AuthLayout />,
       children: [
-        {
-          path: "signin",
-          element: <SignIn />,
-        },
-        {
-          path: "signup",
-          element: <SignUp />,
-        },
-        {
-          path: "otp",
-          element: <OTP />,
-        },
+        { path: "signin", element: <SignIn /> },
+        { path: "signup", element: <SignUp /> },
+        { path: "otp", element: <OTP /> },
       ],
     },
   ];
