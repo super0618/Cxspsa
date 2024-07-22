@@ -69,7 +69,10 @@ const Navigation = () => {
               <Select.Option value="2">Project2</Select.Option>
               <Select.Option value="3">Project3</Select.Option>
             </Select>
-            <IconButton href="/new_project" tooltip="New Project">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/new_project`}
+              tooltip="New Project"
+            >
               <img
                 src="/icons/icon-new_project.svg"
                 alt="New Project"
@@ -79,55 +82,82 @@ const Navigation = () => {
           </Flex>
 
           <Flex align="center">
-            <IconButton href="/stakeholders" tooltip="Stakeholders">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/stakeholders`}
+              tooltip="Stakeholders"
+            >
               <img
                 src="/icons/icon-stakeholders.svg"
                 alt="Stakeholders"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/requirements" tooltip="Scope/Requirements">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/requirements`}
+              tooltip="Scope/Requirements"
+            >
               <img src="/icons/icon-scope.svg" alt="Requirements" width="20" />
             </IconButton>
-            <IconButton href="/assumptions" tooltip="Assumptions">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/assumptions`}
+              tooltip="Assumptions"
+            >
               <img
                 src="/icons/icon-assumptions.svg"
                 alt="Assumptions"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/risks_management" tooltip="Risks Management">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/risk_management`}
+              tooltip="Risks Management"
+            >
               <img
                 src="/icons/icon-risks.svg"
                 alt="Risks Management"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/project_documents" tooltip="Project Documents">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/project_documents`}
+              tooltip="Project Documents"
+            >
               <img
                 src="/icons/icon-documents.svg"
                 alt="Project Documents"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/time_tracking" tooltip="Time Tracking">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/time_tracking`}
+              tooltip="Time Tracking"
+            >
               <img
                 src="/icons/icon-time_tracking.svg"
                 alt="Time Tracking"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/change_management" tooltip="Change Management">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/change_management`}
+              tooltip="Change Management"
+            >
               <img
                 src="/icons/icon-change.svg"
                 alt="Change Management"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/issues" tooltip="Issues">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/issues`}
+              tooltip="Issues"
+            >
               <img src="/icons/icon-issue.svg" alt="Issues" width="20" />
             </IconButton>
-            <IconButton href="/ccb" tooltip="Change Control Board">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/ccb`}
+              tooltip="Change Control Board"
+            >
               <img
                 src="/icons/icon-ccb.svg"
                 alt="Change Control Board"
@@ -167,35 +197,50 @@ const Navigation = () => {
 
         <Flex align="center" justify="space-between">
           <Flex align="center" gap={4}>
-            <IconButton href="/project_summary" tooltip="Project Summary">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/project_summary`}
+              tooltip="Project Summary"
+            >
               <img
                 src="/icons/icon-project_summary.svg"
                 alt="Project Summary"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/project_details" tooltip="Project Details">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/project_details`}
+              tooltip="Project Details"
+            >
               <img
                 src="/icons/icon-launch_details.svg"
                 alt="Project Details"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/project_contacts" tooltip="Project Contacts">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/project_contacts`}
+              tooltip="Project Contacts"
+            >
               <img
                 src="/icons/icon-project_contacts.svg"
                 alt="Project Contacts"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/share_project" tooltip="Share Project">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/share_project`}
+              tooltip="Share Project"
+            >
               <img
                 src="/icons/icon-share_project.svg"
                 alt="Share Project"
                 width="20"
               />
             </IconButton>
-            <IconButton href="/collaboration" tooltip="Collaboration">
+            <IconButton
+              href={`${process.env.REACT_APP_BASE_URL || ""}/collaboration`}
+              tooltip="Collaboration"
+            >
               <img
                 src="/icons/icon-team_collaboration.svg"
                 alt="Collaboration"
@@ -203,7 +248,9 @@ const Navigation = () => {
               />
             </IconButton>
             <IconButton
-              href="/manage_project_access"
+              href={`${
+                process.env.REACT_APP_BASE_URL || ""
+              }/manage_project_access`}
               tooltip="Manage Project Access"
             >
               <img

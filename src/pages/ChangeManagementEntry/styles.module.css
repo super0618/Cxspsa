@@ -11,13 +11,20 @@
   margin: 0;
 }
 
-.treeview {
-  border: 1px solid #ccc;
-  padding: 12px;
-  flex: 0 0 250px;
-  height: 600px;
+.input {
+  width: 200px;
 }
 
-.content {
+.select {
+  width: 200px;
+}
+
+.card {
+  flex: 0 0 250px;
+}
+
+.card-content {
+  border: 1px solid #ccc;
+  border-radius: 6px;
   flex: 1 1 auto;
 }

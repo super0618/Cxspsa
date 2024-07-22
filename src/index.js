@@ -16,9 +16,7 @@ import App from "./App";
 import { registerLicense } from "@syncfusion/ej2-base";
 
 // Register Syncfusion License Key
-registerLicense(
-  "Ngo9BigBOggjHTQxAR8/V1NCaF5cXmZCf1FpRmJGdld5fUVHYVZUTXxaS00DNHVRdkdnWXlcd3RUR2lZUE1zV0E="
-);
+registerLicense(process.env.REACT_APP_SYNCFUION_LICENSE_KEY || "");
 
 // Register Element for Chart.js
 Chart.register(

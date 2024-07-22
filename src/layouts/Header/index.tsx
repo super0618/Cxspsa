@@ -8,11 +8,18 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Flex align="center" justify="space-between">
-        <a href="/" className={styles.logo}>
+        <a
+          href={`${process.env.REACT_APP_BASE_URL || ""}/`}
+          className={styles.logo}
+        >
           COEXSYS
         </a>
 
-        <Button type="primary" size="small" href="/new_project">
+        <Button
+          type="primary"
+          size="small"
+          href={`${process.env.REACT_APP_BASE_URL || ""}/new_project`}
+        >
           New Project
         </Button>
 

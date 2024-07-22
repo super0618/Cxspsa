@@ -29,11 +29,12 @@ import ProjectContacts from "./pages/ProjectContacts";
 import ShareProject from "./pages/ShareProject";
 import Collaboration from "./pages/Collaboration";
 import ManageProjectAccess from "./pages/ManageProjectAccess";
+import ChangeManagementEntry from "./pages/ChangeManagementEntry";
 
 function App() {
   const routes = [
     {
-      path: "/",
+      path: `${process.env.REACT_APP_BASE_URL || ""}`,
       element: <AdminLayout />,
       children: [
         { path: "", element: <Landing /> },
@@ -44,7 +45,7 @@ function App() {
         { path: "stakeholders", element: <Stakeholders /> },
         { path: "requirements", element: <Requirements /> },
         { path: "assumptions", element: <Assumptions /> },
-        { path: "risks_management", element: <RiskManagement /> },
+        { path: "risk_management", element: <RiskManagement /> },
         { path: "project_documents", element: <ProjectDocuments /> },
         { path: "time_tracking", element: <TimeTracking /> },
         { path: "change_management", element: <ChangeManagement /> },
@@ -56,10 +57,11 @@ function App() {
         { path: "share_project", element: <ShareProject /> },
         { path: "collaboration", element: <Collaboration /> },
         { path: "manage_project_access", element: <ManageProjectAccess /> },
+        { path: "change_management_entry", element: <ChangeManagementEntry /> },
       ],
     },
     {
-      path: "/auth",
+      path: `${process.env.REACT_APP_BASE_URL || ""}/auth`,
       element: <AuthLayout />,
       children: [
         { path: "signin", element: <SignIn /> },

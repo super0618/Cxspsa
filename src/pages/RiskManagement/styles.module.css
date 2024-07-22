@@ -10,3 +10,11 @@
 .leading {
   margin: 0;
 }
+
+.input {
+  width: 200px;
+}
+
+.select {
+  width: 200px;
+}

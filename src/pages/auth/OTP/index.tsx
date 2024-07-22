@@ -18,7 +18,10 @@ const OTPUI = () => {
       </Flex>
 
       <Flex justify="center" gap={8} className={styles.footer}>
-        <a href="#">Password Help</a>|<a href="/auth/signup">SignUp</a>
+        <a href="#">Password Help</a>|
+        <a href={`${process.env.REACT_APP_BASE_URL || ""}/auth/signup`}>
+          SignUp
+        </a>
       </Flex>
     </Space>
   );

@@ -10,3 +10,8 @@
 .leading {
   margin: 0;
 }
+
+.danger {
+  margin: 0;
+  color: rgb(227, 97, 97);
+}

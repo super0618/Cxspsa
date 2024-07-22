@@ -11,9 +11,11 @@
   "dependencies": {
     "@syncfusion/ej2-base": "^26.1.37",
     "@syncfusion/ej2-react-documenteditor": "^26.1.41",
+    "@syncfusion/ej2-react-filemanager": "^26.1.41",
     "@syncfusion/ej2-react-gantt": "^26.1.41",
     "@syncfusion/ej2-react-kanban": "^26.1.40",
     "@syncfusion/ej2-react-popups": "^26.1.41",
+    "@syncfusion/ej2-react-richtexteditor": "^26.1.42",
     "@syncfusion/ej2-react-treegrid": "^26.1.41",
     "@tabler/icons-react": "^3.9.0",
     "@types/node": "^20.14.10",

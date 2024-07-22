@@ -14,7 +14,9 @@ const SignUp = () => {
       <Space direction="vertical" size="small" className={styles.main}>
         <p className={styles.leading}>Password</p>
         <Input type="password" prefix={<IconLock size={18} />} size="large" />
-        <a href="/auth/signin">Already have an account? SignIn</a>
+        <a href={`${process.env.REACT_APP_BASE_URL || ""}/auth/signin`}>
+          Already have an account? SignIn
+        </a>
       </Space>
 
       <Flex justify="end">
