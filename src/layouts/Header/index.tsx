@@ -24,7 +24,12 @@ const Header = () => {
         </Button>
 
         <Flex align="center" gap={4}>
-          <Button type="link">Admin Workbench</Button>
+          <Button
+            type="link"
+            href={`${process.env.REACT_APP_BASE_URL || ""}/dashboard`}
+          >
+            Admin Workbench
+          </Button>
 
           <Notification />
 

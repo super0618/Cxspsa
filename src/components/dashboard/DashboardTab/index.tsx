@@ -145,12 +145,17 @@ const DashboardTab = () => {
       </Space>
 
       <Space direction="vertical" size="small" className={styles.main}>
-        <Flex gap={4} align="center">
-          <p className={styles.heading}>Users currently logged in</p>
-          <IconRefresh size={18} />
-          <IconFileExcel size={18} />
-          <IconExternalLink size={18} />
-          <IconHelp size={18} />
+        <Flex align="center" justify="space-between">
+          <Flex gap={4} align="center">
+            <p className={styles.heading}>Users currently logged in</p>
+            <IconRefresh size={18} />
+            <IconFileExcel size={18} />
+            <IconExternalLink size={18} />
+            <IconHelp size={18} />
+          </Flex>
+          <a href={`${process.env.REACT_APP_BASE_URL || ""}/history`}>
+            History
+          </a>
         </Flex>
         <Table columns={columns} dataSource={data} pagination={false} />
       </Space>
