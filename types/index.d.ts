@@ -12,3 +12,6 @@ declare module "*.bmp";
 
 declare module "*.js";
 declare module "*.json";
+
+// Import Alias
+declare module "@/*";

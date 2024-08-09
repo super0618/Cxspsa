@@ -25,6 +25,8 @@ const MainTab = () => {
   const projectStartDate = new Date("03/24/2024");
   const projectEndDate = new Date("07/06/2024");
 
+  console.log(projectNewData);
+
   return (
     <Space direction="vertical" size="large" className={styles.main}>
       <GanttComponent

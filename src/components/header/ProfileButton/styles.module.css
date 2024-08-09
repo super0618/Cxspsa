@@ -1,5 +1,5 @@
 .profile {
-  padding: 8px;
+  padding: 8px 8px 8px 12px;
   cursor: pointer;
   border-radius: 6px;
   translate: 0.2s;
@@ -7,4 +7,9 @@
 
 .profile:hover {
   background-color: #ddd;
+}
+
+.leading {
+  line-height: 1;
+  margin: 0;
 }

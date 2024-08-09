@@ -1,17 +1,20 @@
+import { useContext } from "react";
 import { Header, Chat } from "../layouts";
-import { useLocation, Outlet } from "react-router-dom";
+import { useLocation, Outlet, Navigate } from "react-router-dom";
+import { GlobalContext } from "../lib/context";
 import styles from "./styles.module.css";
 
 const AdminLayout = () => {
+  const { auth } = useContext(GlobalContext);
   const { pathname } = useLocation();
 
   let backgroundColor = "#fff";
 
-  if (pathname === "/") {
+  if (pathname === `${process.env.REACT_APP_BASE_URL || ""}`) {
     backgroundColor = "#fcfcfc";
   }
 
-  return (
+  return auth ? (
     <>
       <Header />
       <div className={styles.content} style={{ backgroundColor }}>
@@ -19,6 +22,8 @@ const AdminLayout = () => {
       </div>
       <Chat />
     </>
+  ) : (
+    <Navigate to={`${process.env.REACT_APP_BASE_URL || ""}/auth/signin`} />
   );
 };
 

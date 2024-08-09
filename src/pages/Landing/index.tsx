@@ -1,7 +1,10 @@
+import React, { useEffect } from "react";
 import { Space, Flex, Select, Row, Col, Table, Tag } from "antd";
 import type { TableProps } from "antd";
 import { Doughnut } from "react-chartjs-2";
 import { OverviewCard, LandingCard } from "../../components/landing";
+import Echo from "laravel-echo";
+import Pusher from "pusher-js";
 import {
   IconBriefcase,
   IconChecklist,
@@ -140,6 +143,25 @@ const Landing = () => {
       },
     ],
   };
+
+  useEffect(() => {
+    const pusher = new Pusher("local", {
+      cluster: "mt1",
+      wsHost: window.location.hostname,
+      wsPort: 6001,
+      forceTLS: false,
+    });
+
+    const channel = pusher.subscribe("chat");
+    channel.bind("App\\Events\\MessageEvent", (data: any) => {
+      console.log(data);
+    });
+
+    return () => {
+      channel.unbind_all();
+      channel.unsubscribe();
+    };
+  }, []);
 
   return (
     <Space direction="vertical" size="middle" className={styles.main}>

@@ -1,9 +1,20 @@
-import { Dropdown, Space, Avatar } from "antd";
+import { useContext } from "react";
+import { Dropdown, Space, Avatar, Flex } from "antd";
 import type { MenuProps } from "antd";
-import { IconUserFilled } from "@tabler/icons-react";
+import { IconChevronDown, IconUserFilled } from "@tabler/icons-react";
+import { GlobalContext } from "../../../lib/context";
+import request from "../../../utils/request";
 import styles from "./styles.module.css";
 
 const ProfileButton = () => {
+  const { setAuth, profile, setProfile } = useContext(GlobalContext);
+
+  const onLogout = () => {
+    request.clearToken();
+    setAuth(false);
+    setProfile({});
+  };
+
   const items: MenuProps["items"] = [
     {
       key: "1",
@@ -15,20 +26,20 @@ const ProfileButton = () => {
     },
     {
       key: "3",
-      label: <a href="#">Logout</a>,
+      label: <a href="#">My Login History</a>,
     },
     {
       key: "4",
-      label: <a href="#">My Login History</a>,
+      label: <div onClick={onLogout}>Logout</div>,
     },
   ];
 
   return (
     <Dropdown menu={{ items }} trigger={["click"]}>
-      <Space wrap={false} size={4} className={styles.profile}>
-        <Avatar size={28} icon={<IconUserFilled size={18} />} />
-        Thomas
-      </Space>
+      <Flex wrap={false} align="center" gap={4} className={styles.profile}>
+        <p className={styles.leading}>{profile.full_name}</p>
+        <IconChevronDown size={16} />
+      </Flex>
     </Dropdown>
   );
 };

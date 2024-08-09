@@ -12,9 +12,13 @@ import {
   CriticalPathTab,
   PerformanceTab,
 } from "../../components/navigation";
+import { useContext } from "react";
+import { GlobalContext } from "../../lib/context";
 import styles from "./styles.module.css";
 
 const Navigation = () => {
+  const { currentProject, projects, owners } = useContext(GlobalContext);
+
   const items: TabsProps["items"] = [
     {
       key: "1",
@@ -64,10 +68,18 @@ const Navigation = () => {
         <Flex align="center" gap={64}>
           <Flex align="center" gap={14}>
             <p className={styles.heading}>Project Name:</p>
-            <Select defaultValue={["1"]} className={styles.select}>
-              <Select.Option value="1">Project1</Select.Option>
-              <Select.Option value="2">Project2</Select.Option>
-              <Select.Option value="3">Project3</Select.Option>
+            <Select
+              defaultValue={[currentProject.project_id]}
+              className={styles.select}
+            >
+              {projects.map((project: any) => (
+                <Select.Option
+                  key={project.project_id}
+                  value={project.project_id}
+                >
+                  {project.project_name}
+                </Select.Option>
+              ))}
             </Select>
             <IconButton
               href={`${process.env.REACT_APP_BASE_URL || ""}/new_project`}
@@ -170,28 +182,32 @@ const Navigation = () => {
         <Flex align="center" gap={16}>
           <Flex align="center" gap={4}>
             <p className={styles.heading}>Schedule Start:</p>
-            <p className={styles.leading}>11/07/2024</p>
+            <p className={styles.leading}>
+              {currentProject.schedule_start_date}
+            </p>
           </Flex>
           <Flex align="center" gap={4}>
             <p className={styles.heading}>Schedule End:</p>
-            <p className={styles.leading}>11/07/2024</p>
-          </Flex>
-          <Flex align="center" gap={4}>
-            <p className={styles.heading}>TimeZone:</p>
-            <p className={styles.leading}>PST</p>
+            <p className={styles.leading}>{currentProject.schedule_end_date}</p>
           </Flex>
           <Flex align="center" gap={4}>
             <p className={styles.heading}>Timesheet Period Type:</p>
-            <p className={styles.leading}>Monthly</p>
+            <p className={styles.leading}>{currentProject.period_type}</p>
           </Flex>
         </Flex>
 
         <Flex align="center" gap={8}>
           <p className={styles.heading}>Project Owner:</p>
-          <Select defaultValue={["1"]} className={styles.select}>
-            <Select.Option value="1">Owner1</Select.Option>
-            <Select.Option value="2">Owner2</Select.Option>
-            <Select.Option value="3">Owner3</Select.Option>
+          <Select
+            defaultValue={[currentProject.project_owner || 0]}
+            className={styles.select}
+          >
+            <Select.Option value={0}>No Owner</Select.Option>
+            {owners.map((owner: any) => (
+              <Select.Option key={owner.id} value={owner.id}>
+                {owner.full_name}
+              </Select.Option>
+            ))}
           </Select>
         </Flex>
 

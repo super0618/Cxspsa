@@ -13,3 +13,17 @@
 .logo:hover {
   color: #646565;
 }
+
+.btn {
+  border: 1px solid #d4dae1;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #646565;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+.btn:hover {
+  border: 1px solid #a1a7ad;
+  color: #444444;
+}
