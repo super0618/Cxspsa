@@ -13,6 +13,7 @@ import {
   PointElement,
 } from "chart.js";
 import App from "./App";
+import { GlobalContextProvider } from "./lib/context";
 import { registerLicense } from "@syncfusion/ej2-base";
 
 // Register Syncfusion License Key
@@ -33,10 +34,12 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <ConfigProvider theme={{ token: { colorPrimary: "#8a8e8e" } }}> */}
-    <ConfigProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ConfigProvider>
+    <GlobalContextProvider>
+      <ConfigProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ConfigProvider>
+    </GlobalContextProvider>
   </React.StrictMode>
 );
